@@ -1,0 +1,65 @@
+<mvc:View controllerName="employee.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    	<Page id="_IDGenPage1" title="{i18n>CRUD Operation}" class="sapUiResponsiveContent sapUiTheme sapUiSizeCompact">
+				<headerContent>
+					<OverflowToolbar id="sbar1">
+						<ToolbarSpacer id="toba"/>
+						<Toolbar id="tbar">
+							<Label id="tableHeader" text="{worklistView>/worklistTableTitle}"/>
+							<SearchField  id="search" width="100%" liveChange="onSearch"/>
+						</Toolbar>
+						<!--<Button icon="sap-icon://search" press="onSearch"></Button>-->
+						<Button id="login" icon="sap-icon://add-employee" press="onLogin"></Button>
+						<Button id="update" icon="sap-icon://newspaper" press="onUpdateLogin"></Button>
+						<Button id="delete" icon="sap-icon://delete" press="onDelete"></Button>
+					</OverflowToolbar>
+				</headerContent>
+				<VBox id="vb1" class="sapUiSmallMargin">
+					<Table id="studentTable" items="{/employee}" mode="SingleSelect">
+						<columns>
+                        <Column id="_IDGenColumn1">
+								<Text id="_IDGenText7" text="Employee ID"/>
+							</Column>
+							<Column id="_IDGenColumn2">
+								<Text id="_IDGenText8" text="Employee First Name"/>
+							</Column>
+							<Column id="_IDGenColumn3">
+								<Text id="_IDGenText9" text="Employee Last Name"/>
+							</Column>
+							<Column id="_IDGenColumn4">
+								<Text id="_IDGenText10" text="Employee Age"/>
+							</Column>
+							<Column id="_IDGenColumn5">
+								<Text id="_IDGenText11" text="Employee Contact No"/>
+							</Column>
+							<Column id="_IDGenColumn6">
+								<Text id="_IDGenText12" text="Employee Hiring Date" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem id="_IDGenColumnListItem1">
+								<cells>
+									<ObjectIdentifier id="_IDGenObjectIdentifier1" title="{ID}"/>
+									<Text id="_IDGenText13" text="{firstName}"/>
+									<Text id="_IDGenText14" text="{lastName}"/>
+									<Text id="_IDGenText15" text="{age}"/>
+									<Text id="_IDGenText16" text="{phone}"/>
+                                    <Text id="_IDGenText17" text="{hiringDate}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+
+				</VBox>
+				<footer>
+					<OverflowToolbar id="ov1">
+						<content>
+						<ToolbarSpacer id="tl1"/>
+							<Link id="_IDGenLink1" text="Contact Us" href="https://abccompany.com/company/contact-us/"/>
+							<Text id="_IDGenText6" text="ABC Company"/>
+						</content>
+					</OverflowToolbar>
+				</footer>
+			</Page>
+</mvc:View>

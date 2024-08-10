@@ -1,0 +1,39 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Dialog id="yourDialogialog" title="Employee Details" contentWidth="auto" contentHeight="auto" draggable="true" resizable="true"
+		showHeader="true">
+		<customHeader>
+			<Toolbar id="_IDGenToolbar1" class="customToolbar">
+				<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+				<Button id="_IDGenButton1" icon="sap-icon://decline" press="onCloseDialog"/>
+			</Toolbar>
+		</customHeader>
+		<VBox id="_IDGenVBox1" class="verticalClass">
+			<HBox id="_IDGenHBox1" class="Horizantal Box">
+				<Label id="_IDGenLabel1" class="label" text="Employee ID"/>
+				<Input id="_IDGenInput1" class="input" value="{newItem>/ID}" width="75%"/>
+			</HBox>
+			<HBox id="_IDGenHBox2" class="Horizantal Box">
+				<Label id="_IDGenLabel2" class="label" text="Employee First Name"/>
+				<Input id="_IDGenInput2" class="input" value="{newItem>/firstName}" width="75%"/>
+			</HBox>
+			<HBox id="_IDGenHBox4" class="Horizantal Box">
+				<Label id="_IDGenLabel4" class="label" text="Employee Last Name"/>
+				<Input id="_IDGenInput4" class="input" value="{newItem>/lastName}" width="75%"/>
+			</HBox>
+            	<HBox id="_IDGenHBox5" class="Horizantal Box">
+				<Label id="_IDGenLabel5" class="label" text="Employee Age"/>
+				<Input id="_IDGenInput5" class="input" value="{newItem>/age}" width="75%"/>
+			</HBox>
+            	<HBox id="_IDGenHBox3" class="Horizantal Box">
+				<Label id="_IDGenLabel3" class="label" text="Employee contact No"/>
+				<Input id="_IDGenInput3" class="input" value="{newItem>/phone}" width="75%"/>
+			</HBox>
+            <HBox id="_IDGenHBox6" class="Horizantal Box">
+				<Label id="_IDGenLabel6" class="label" text="Employee hiring Date"/>
+				<Input id="_IDGenInput6" class="input" value="{newItem>/hiringDate}" width="75%"/>
+			</HBox>
+		</VBox>
+		<Button id="Add" icon="sap-icon://add-employee" text="Save" press="onAdd"/>
+		<Button id="Update" icon="sap-icon://edit" text="Update" press="onUpdate"/>
+	</Dialog>
+</core:FragmentDefinition>
